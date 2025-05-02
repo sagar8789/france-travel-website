@@ -46,7 +46,7 @@ def scrape_places():
         content = soup.find("div", class_="mw-parser-output")
         if content:
             for i, landmark in enumerate(landmarks):
-                paragraphs = content.find_all("p?")
+                paragraphs = content.find_all("p")
                 description = "A famous landmark in France."
                 for p in paragraphs:
                     if landmark.lower() in p.text.lower():
